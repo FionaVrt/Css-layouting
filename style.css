@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* pour ma navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+}
+
+.menu li{
+    margin-right: 20px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.login-butoon, .signup-button{
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* grille principal */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    gap: 20px;
+}
+
+.aside {
+    position: sticky;
+    top: 20px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+ .tweet {
+    background-color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+}
+
+.tweet:nth-child(3n) {
+    grid-column: span 2; 
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu{
+        margin-top: 20px;
+    }
+    .buttons{
+        margin-top: 20px;
+    }
+    .grid-container{
+        grid-template-areas: "aside" "main";
+    }
+    
+        .container {
+            grid-template-columns: 1fr; /* Une seule colonne */
+        grid-template-areas:
+            "aside"
+            "main";
+        gap: 10px;
+    }
+
+    .aside {
+        grid-area: aside;
+    }
+
+    .main {
+        grid-area: main;
+    }
+}
