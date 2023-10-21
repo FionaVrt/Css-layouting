@@ -3,43 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microblogging</title>
     <link rel="stylesheet" href="style.css">
-    <title>rendu</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">Logo</div>
-        <ul class="menu">
-            <li>Acceil</li>
-            <li>A propos</li>
-            <li>Service</li>
-            <li>Contact</li>
-        </ul>
-        <div class="Buttons">
-            <button class="login-button">Connexion</button>
-            <button class="signup-button">Inscription</button>
-        </div>
-        </div>
-        <div class="container">
-            <aside class="aside">
-                <h2># Populaires</h2>
-                <ul>
-                    <li>#Hashtag1</li>
-                    <li>#Hashtag2</li>
-                    <li>#Hashtag3</li>
-                </ul>
-            </aside>
-            <main class="main">
-                <div class="tweet">
-                    
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- Logo content here -->
+            </div>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Explorer</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Profil</a></li>
+            </ul>
+            <div class="user-actions">
+                <button class="btn-connect">Connexion</button>
+                <button class="btn-signup">Inscription</button>
+            </div>
+        </nav>
+    </header>
+    <aside>
+        <section class="popular-hashtags">
+            <h2>Hashtags Populaires</h2>
+            <ul>
+                <li><a href="#">#CSS</a></li>
+                <li><a href="#">#WebDesign</a></li>
+                <li><a href="#">#Responsive</a></li>
+                <li><a href="#">#FrontEnd</a></li>
+                <li><a href="#">#Microblogging</a></li>
+            </ul>
+        </section>
+    </aside>
+    <main>
+        <section class="tweets">
+            <article class="tweet">
+                <header class="tweet-header">
+                    <div class="user-avatar">
+                        <!-- Insérez ici une image de l'avatar de l'utilisateur -->
+                    </div>
+                    <div class="user-info">
+                        <p class="user-name">Nom de l'utilisateur</p>
+                        <p class="user-username">@username</p>
+                    </div>
+                </header>
+                <div class="tweet-content">
+                    <p>Contenu du tweet...</p>
                 </div>
-                <div class="tweet">Tweet 2</div>
-                <div class="tweet">Tweet 3</div>
-                <div class="tweet">Tweet 4</div>
-                <div class="tweet">Tweet 5</div>
-                <div class="tweet">Tweet 6</div>
-            </main>
-        </div>
-    </div>
+            </article>
+            <!-- Ajoutez autant d'articles de tweet que nécessaire -->
+        </section>
+    </main>
 </body>
 </html>

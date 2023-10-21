@@ -1,12 +1,11 @@
-*{
+/* Reset some default styles */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
 
-/* pour ma navbar */
-.navbar{
+/* Style the header and navigation */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,89 +14,213 @@
     padding: 10px;
 }
 
-.logo{
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu{
-    list-style: none;
-    display: flex;
-}
-
-.menu li{
-    margin-right: 20px;
-}
-
-.buttons{
+nav {
     display: flex;
     align-items: center;
 }
 
-.login-butoon, .signup-button{
-    background-color: #f0f0f0;
-    color: #333;
-    border: none;
+
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+.btn-connect,
+.btn-signup {
     padding: 10px 20px;
-    margin-left: 10px;
+    margin: 0 10px;
+    border: none;
     cursor: pointer;
+    font-size: 1em;
+}
+.btn-connect {
+    background-color: #007bff;
+    color: #fff;
+}
+.btn-signup {
+    background-color: #333;
+    color: #fff;
+}
+.btn-connect:hover,
+.btn-signup:hover {
+    background-color: #0056b3;
 }
 
-/* grille principal */
 
-.container {
+/* Style main content */
+main {
     display: grid;
-    grid-template-columns: 1fr 3fr; 
-    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
 }
 
-.aside {
+.tweets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.tweet {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+/* Styles pour la section du header du tweet */
+.tweet-header {
+    display: flex;
+    align-items: center;
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Pour créer une forme d'avatar circulaire */
+    /* Ajoutez ici les styles pour l'image de l'avatar */
+}
+.user-info {
+    margin-left: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-username {
+    color: #888;
+}
+/* Styles pour le contenu du tweet */
+.tweet-content {
+    margin-top: 10px;
+}
+
+/* Style the aside */
+/* Styles pour la section des hashtags populaires */
+.popular-hashtags {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.popular-hashtags h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.popular-hashtags ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-hashtags li {
+    margin-bottom: 10px;
+}
+
+.popular-hashtags a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Styles pour rendre l'aside sticky */
+.popular-hashtags {
     position: sticky;
-    top: 20px;
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
- .tweet {
-    background-color: #e0e0e0;
-    padding: 10px;
-    text-align: center;
-}
-
-.tweet:nth-child(3n) {
-    grid-column: span 2; 
+    top: 20px; /* Ajustez la valeur en fonction de votre mise en page */
 }
 
 
 
+
+
+/* Styles pour écran de petite taille (par exemple, mobile) */
 @media (max-width: 768px) {
-    .navbar{
-        flex-direction: column;
-        text-align: center;
-    }
-    .menu{
-        margin-top: 20px;
-    }
-    .buttons{
-        margin-top: 20px;
-    }
-    .grid-container{
-        grid-template-areas: "aside" "main";
+    header {
+        flex-direction: column; /* Passe la barre de navigation en colonne */
     }
     
-        .container {
-            grid-template-columns: 1fr; /* Une seule colonne */
-        grid-template-areas:
-            "aside"
-            "main";
-        gap: 10px;
+    .menu {
+        flex-direction: column; /* Passe les éléments du menu en colonne */
     }
-
-    .aside {
-        grid-area: aside;
+    
+    .user-actions {
+        flex-direction: column;
     }
+    .btn-connect,
+    .btn-signup {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    /* aside */
+    .popular-hashtags {
+        padding: 10px;
+    }
+    
+    .popular-hashtags h2 {
+        font-size: 1em;
+    }
+    
+    .popular-hashtags li {
+        margin-bottom: 5px;
+    }
+    
+    main {
+        grid-template-columns: 1fr; /* Une seule colonne pour le contenu principal */
+    }
+}
 
-    .main {
-        grid-area: main;
+/* Styles pour tablettes et écrans plus larges */
+@media (min-width: 769px) {
+    header {
+        flex-direction: row; /* Revenir à la disposition horizontale */
+    }
+    
+    .menu {
+        flex-direction: row; /* Revenir à la disposition horizontale */
+    }
+    /* aside */
+    .popular-hashtags {
+        padding: 10px;
+    }
+    
+    .popular-hashtags h2 {
+        font-size: 0.8em;
+    }
+    
+    .popular-hashtags ul {
+        text-align: center;
+    }
+    
+    .popular-hashtags li {
+        margin-bottom: 5px;
+    }
+    
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes côte à côte */
+    }
+    
+    /* Styles spécifiques pour les tweets en deux colonnes */
+    .tweet:nth-child(2n) {
+        /* Ajoutez ici des styles spécifiques pour les tweets pairs */
+    }
+    
+    /* Styles spécifiques pour les tweets en une colonne */
+    .tweet {
+        /* Ajoutez ici des styles spécifiques pour les tweets en une colonne */
+    }
+    
+    /* Styles spécifiques pour le header des tweets en deux colonnes */
+    .tweet:nth-child(2n) .header {
+        /* Styles spécifiques pour les headers de tweets pairs */
+    }
+    
+    /* Styles spécifiques pour le header des tweets en une colonne */
+    .tweet .header {
+        /* Styles spécifiques pour les headers des tweets en une colonne */
     }
 }
