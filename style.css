@@ -1,3 +1,4 @@
+
 /* Reset some default styles */
 body, h1, h2, p {
     margin: 0;
@@ -18,8 +19,6 @@ nav {
     display: flex;
     align-items: center;
 }
-
-
 
 .menu {
     list-style: none;
@@ -78,11 +77,11 @@ main {
     display: flex;
     align-items: center;
 }
-.user-avatar {
+.user-avatar img{
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Pour créer une forme d'avatar circulaire */
-    /* Ajoutez ici les styles pour l'image de l'avatar */
+    border-radius: 50%; 
+    
 }
 .user-info {
     margin-left: 10px;
@@ -100,7 +99,7 @@ main {
     margin-top: 10px;
 }
 
-/* Style the aside */
+
 /* Styles pour la section des hashtags populaires */
 .popular-hashtags {
     background-color: #f4f4f4;
@@ -130,7 +129,7 @@ main {
 /* Styles pour rendre l'aside sticky */
 .popular-hashtags {
     position: sticky;
-    top: 20px; /* Ajustez la valeur en fonction de votre mise en page */
+    top: 20px; 
 }
 
 
@@ -172,6 +171,23 @@ main {
     main {
         grid-template-columns: 1fr; /* Une seule colonne pour le contenu principal */
     }
+    .tweets {
+        display: block; /* Changez la disposition en une seule colonne */
+    }
+    .tweet {
+        width: 100%; 
+        margin: 0 0 20px; /* Ajoute de l'espace entre les tweets */
+    }
+    .tweet .tweet-header {
+        background-color: #333; 
+        padding: 10px; 
+    }
+    .tweet .user-avatar {
+        border: 2px solid #ccc; 
+    }
+       .tweet .user-name {
+        font-weight: normal; 
+    }
 }
 
 /* Styles pour tablettes et écrans plus larges */
@@ -206,21 +222,28 @@ main {
     
     /* Styles spécifiques pour les tweets en deux colonnes */
     .tweet:nth-child(2n) {
-        /* Ajoutez ici des styles spécifiques pour les tweets pairs */
+    background-color: #333; /* Couleur de fond pour les tweets pairs */
+    border: 1px solid #ccc; /* Bordure légère */
+    padding: 15px; /* Espacement interne */
     }
     
     /* Styles spécifiques pour les tweets en une colonne */
     .tweet {
-        /* Ajoutez ici des styles spécifiques pour les tweets en une colonne */
+        width: 100%; /* Occupe toute la largeur disponible */
+        margin: 0; /* Supprime les marges */
+        border: 1px solid #ddd; /* Ajoute une légère bordure pour séparer les tweets */
+        padding: 10px; /* Espacement interne */
     }
     
     /* Styles spécifiques pour le header des tweets en deux colonnes */
     .tweet:nth-child(2n) .header {
-        /* Styles spécifiques pour les headers de tweets pairs */
+    background-color: #333; /* Fond du header des tweets pairs */
+    padding: 10px; /* Espacement interne du header */
     }
     
     /* Styles spécifiques pour le header des tweets en une colonne */
     .tweet .header {
-        /* Styles spécifiques pour les headers des tweets en une colonne */
+        background-color: #333; /* Fond légèrement différent pour le header */
+        padding: 10px; /* Espacement interne du header */
     }
 }
