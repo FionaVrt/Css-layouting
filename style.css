@@ -210,7 +210,7 @@ main {
         grid-template-columns: 1fr; /* Une seule colonne pour le contenu principal */
     }
     .tweets {
-        display: block; /* Changez la disposition en une seule colonne */
+        display: block; 
     }
     .tweet {
         width: 100%; 
@@ -234,7 +234,7 @@ main {
         flex-direction: row; /* Revenir à la disposition horizontale */
     }
     .logo img {
-        max-width: 80px; /* Réduisez la largeur du logo pour les écrans de petite taille */
+        max-width: 80px; 
     }
     .menu {
         flex-direction: row; 
@@ -263,29 +263,29 @@ main {
     
     /* Styles spécifiques pour les tweets en deux colonnes */
     .tweet:nth-child(2n) {
-        background-color: #333; /* Couleur de fond pour les tweets pairs */
-        border: 1px solid #ccc; /* Bordure légère */
-        padding: 15px; /* Espacement interne */
+        background-color: #333; 
+        border: 1px solid #ccc; 
+        padding: 15px; 
     }
     
     /* Styles spécifiques pour les tweets en une colonne */
     .tweet {
-        width: 100%; /* Occupe toute la largeur disponible */
-        margin: 0; /* Supprime les marges */
-        border: 1px solid #ddd; /* Ajoute une légère bordure pour séparer les tweets */
-        padding: 10px; /* Espacement interne */
+        width: 100%; 
+        margin: 0; 
+        border: 1px solid #ddd; 
+        padding: 10px; 
     }
     
     /* Styles spécifiques pour le header des tweets en deux colonnes */
     .tweet:nth-child(2n) .tweet-header {
-        background-color: #333; /* Fond du header des tweets pairs */
-        padding: 10px; /* Espacement interne du header */
+        background-color: #333; 
+        padding: 10px; 
     }
     
     /* Styles spécifiques pour le header des tweets en une colonne */
     .tweet .tweet-header {
-        background-color: #333; /* Fond légèrement différent pour le header */
-        padding: 10px; /* Espacement interne du header */
+        background-color: #333; 
+        padding: 10px; 
     }
 }
 
